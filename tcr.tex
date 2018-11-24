@@ -474,6 +474,10 @@ A useful identity: $\bigoplus_{x=0}^{a - 1} x = \{0, a - 1, 1, a\}[a \% 4]$.
 
 \section{Strings}
 
+\entry{Suffix Array}{LCP, LRS, string matching, LCS}
+{./snippets/strings/suffixarray.cpp}
+{}{}
+
 \entry{Knuth Morris Pratt}{}
 {./snippets/strings/knuthmorrispratt.cpp}
 {$O(n + m)$}{}
@@ -483,10 +487,10 @@ A useful identity: $\bigoplus_{x=0}^{a - 1} x = \{0, a - 1, 1, a\}[a \% 4]$.
 {./snippets/strings/zalgorithm.cpp}
 {$O(n)$}{}
 
-\entry{Aho-Corasick}
-{Constructs a Finite State Automaton that can match $k$ patterns of total length $m$ on a string of size $n$.}
-{./snippets/strings/ahocorasick.cpp}
-{$O(n + m + k)$}{}
+%\entry{Aho-Corasick}
+%{Constructs a Finite State Automaton that can match $k$ patterns of total length $m$ on a string of size $n$.}
+%{./snippets/strings/ahocorasick.cpp}
+%{$O(n + m + k)$}{}
 
 \entry{Manacher's Algorithm}
 {Finds the largest palindrome centered at each position.}
