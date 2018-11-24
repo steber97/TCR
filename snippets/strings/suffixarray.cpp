@@ -1,3 +1,4 @@
+//first line is skipped
 #define MAX_N 100010                         // second approach: O(n log n)
 char T[MAX_N];                   // the input string, up to 100K characters
 int n;                                        // the length of input string
