@@ -58,9 +58,9 @@
 
 % all the \vspace are for reducing the vertical spacing
 \title{
-	\vspace{-5em}
-	\includegraphics[scale=0.7]{./logo.eps}\\
-	\vspace{-1.5em}
+	\vspace{-3em}
+	\includegraphics[scale=0.3]{./unitn_logo.jpeg}\\
+	\vspace{0em}
 	Team Code Reference
 	\vspace{-0.7em}
 }
@@ -100,12 +100,12 @@
 
 % two sided
 %\fancyhead[RE]{\bfseries Curiously Recurring \hspace{6.5em}}
-%\fancyhead[LO]{\hspace{5em} Utrecht University}
+%\fancyhead[LO]{\hspace{5em} Università di Trento}
 %\fancyhead[LE,RO]{\thepage}
 %\fancyhead[C]{\leftmark}
 
 % one sided
-\fancyhead[L]{\hspace{5em} Utrecht University \phantom{-} \bfseries
+\fancyhead[L]{\hspace{5em} Università di Trento\phantom{-} \bfseries
 Curiously Recurring}
 \fancyhead[R]{\thepage \hspace{0.5em}}
 \fancyhead[C]{\leftmark}
@@ -480,10 +480,6 @@ A useful identity: $\bigoplus_{x=0}^{a - 1} x = \{0, a - 1, 1, a\}[a \% 4]$.
 
 \section{Strings}
 
-\entry{String basic operations}{}
-{./snippets/strings/stringoperations.cpp}
-{}{}
-
 \entry{Suffix Array}{LCP, LRS, string matching, LCS}
 {./snippets/strings/suffixarray.cpp}
 {}{}
@@ -556,6 +552,12 @@ when for all $a\leq b\leq c\leq d$:
 {./snippets/utils/bitmasking.cpp}{}{}
 
 \entry{Fast IO}{}{./snippets/utils/fastinput.cpp}{}{}
+
+\entry{Priority  Queue custom priority}{}
+{./snippets/utils/priority_queue.cpp}{}
+
+\entry{Sintax for shifting long int}{}
+{./snippets/utils/shift_long_long.cpp}{}
 
 \subsection{Detecting overflow}
 These are GNU builtins, detect both over- and underflow. Returns a boolean upon failure, otherwise the result is present in \texttt{ref}. Follow the template: 
