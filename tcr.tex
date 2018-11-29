@@ -240,7 +240,11 @@ Curiously Recurring}
 {./snippets/graphs/tarjan.cpp}
 {$O(V + E)$}{}
 
-\entry{Biconnected components}{}
+\entry{Graph check edge}{}
+{./snippets/graphs/graph_edge_property.cpp}
+{$O(V + E)$}{}
+
+\entry{Biconnected components}{When vertex v has neighbour u such that dfslow(u) less then or equal dfsnum(u) then u is an articulation point. When dfslow(v) less then dfsnum(u) then edge u-v is articulation edge, bridge }
 {./snippets/graphs/biconnected_component.cpp}
 {$O(V + E)$}{}
 
@@ -248,7 +252,7 @@ Curiously Recurring}
 {./snippets/graphs/MCBM.cpp}
 {$O(V * E)$}{}
 
-\entry{Kruskal's algorithm}{}
+\entry{Kruskal's algorithm}{Second best spanning tree, in $O(V*E)$, just run kruskal, remove one edge at the time, then reconnect the two trees with the minimum edge among the remaining ones\\}
 {./snippets/graphs/kruskal.cpp}
 {$O(E \log V)$}
 {Union Find}
@@ -295,6 +299,17 @@ Curiously Recurring}
 
 	\item[Euler Circuits and Trails]:
 		In an \textit{undirected graph}, an \textit{Eulerian Circuit} exists if and only if all vertices have even degree, and all vertices of nonzero degree belong to a single connected component. In an \textit{undirected graph}, an \textit{Eulerian Trail} exists if and only if at most two vertices have odd degree, and all of its vertices of nonzero degree belong to a single connected component. In a \textit{directed graph}, an \textit{Eulerian Circuit} exists if and only if every vertex has equal indegree and outdegree, and all vertices of nonzero degree belong to a single strongly connected component. In a \textit{directed graph}, an \textit{Eulerian Trail} exists if and only at most one vertex has $outdegree - indegree = 1$, at most one vertex has $indegree - outdegree = 1$, every other vertex has equal indegree and outdegree, and all vertices of nonzero degree belong to a single strongly connected component \textit{in the underlying undirected graph}.
+
+
+	\item[TSP on max 16 nodes]:
+		DP with bitmask:\\
+		1) tsp(pos, $2^{n}$) = dist[pos][0] 
+		// with 0 as starting node\\
+		2) tsp(pos, mask) = min(dist[pos][next] + tsp(next, mask | 	(1<<next))) 
+		// for all next != pos and mask \& (1<<next) == 0
+	
+	\item[Articulation points and bridges]:
+		
 \end{description}
 
 \section{Flow and Matching}
